@@ -69,13 +69,8 @@
 				return out;
 			}
 
-
-			var uploadEndPoint = 'http://upload.qiniup.com';
-
-			// if page loaded over HTTPS, then uploadEndPoint should be "https://upload.qiniup.com", see https://github.com/qiniu/js-sdk/blob/master/README.md#%E8%AF%B4%E6%98%8E
-			if(window && window.location && window.location.protocol==="https:"){
-				uploadEndPoint = "https://upload.qiniup.com";
-			}
+			//see https://github.com/qiniu/js-sdk/blob/master/README.md#%E8%AF%B4%E6%98%8E
+			var uploadEndPoint = '//upload.qiniup.com';
 
 			var defaultsSetting = {
 				chunkSize: 1024 * 1024 * 4,
